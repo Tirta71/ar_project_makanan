@@ -12,14 +12,16 @@
   <body style="margin: 0; overflow: hidden">
     <!-- Bagian AR.js dengan debug -->
     <a-scene embedded arjs debug="true">
+      <!-- Pencahayaan untuk objek AR lebih terang -->
+      <a-light type="directional" position="0 5 5" intensity="1"></a-light>
+
       <!-- Marker untuk mendeteksi gambar tertentu -->
       <a-marker id="marker" type="pattern" url="models/pattern-marker.patt">
-        <!-- Objek 3D berbentuk kubus -->
+        <!-- Model 3D berbentuk GLB -->
         <a-entity
-          geometry="primitive: box; height: 1; width: 1; depth: 1"
-          material="color: blue"
+          gltf-model="url(models/snakefruitbx.glb)"
           scale="2 2 2"
-          position="0 0 0"
+          position="0 0.5 0"
         ></a-entity>
       </a-marker>
 
