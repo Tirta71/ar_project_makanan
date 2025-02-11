@@ -14,9 +14,10 @@
     <a-scene embedded arjs debug="true">
       <!-- Marker untuk mendeteksi gambar tertentu -->
       <a-marker id="marker" type="pattern" url="models/pattern-marker.patt">
-        <!-- Objek 3D yang akan ditampilkan saat marker terdeteksi -->
+        <!-- Objek 3D berbentuk kubus -->
         <a-entity
-          gltf-model="url(models/snakefruitbx.glb)"
+          geometry="primitive: box; height: 1; width: 1; depth: 1"
+          material="color: blue"
           scale="2 2 2"
           position="0 0 0"
         ></a-entity>
